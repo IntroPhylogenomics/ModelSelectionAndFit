@@ -1,0 +1,9 @@
+#nexus
+
+begin sets;
+	charset locus1 = 1-250;
+	charset locus2 = 251-500;
+	charset locus3 = 501-750;
+    charset locus4 = 751-1000;
+	charpartition mine = GTR+G:locus1, GTR+G:locus2, GTR+G:locus3, GTR+G:locus4;
+end;
