@@ -14,3 +14,12 @@ As we have seen in the lecture slides, the number of possible partition models g
 The ```concat.nex``` files contains the same four simulated loci that we just estimated Bayes Factors for, and the ```partition.nex``` file simply specifies where the locus boundaries in the concatenated alignment. After running this command, open the ```partition.nex.best_scheme.nex``` file, which contains the optimal partitioning scheme that IQtree found. Does it match what we found by using Bayes Factors? You can read more about this functionality [here](http://www.iqtree.org/doc/Advanced-Tutorial#choosing-the-right-partitioning-scheme).
 
 The above exercises demonstrate how to measure relative model fit, which asks 'What model, among a set of candidates, fits my data the best?' It is of course possible that all of the models in our set of candidates fit the data poorly. In this case, we would simply be choosing the best of a bad bunch without necessarily realizing it. To avoid this, we often want to measure how well the model describes the data in an absolute sense. These tutorials will show you how to do this using the P<sup>3</sup> pipeline in RevBayes for both [data based](https://revbayes.github.io/tutorials/model_testing_pps/pps_data.html) and [inference based](https://revbayes.github.io/tutorials/model_testing_pps/pps_inference.html) test statistics. The relevant scripts and data files for these tutorials are available [here](https://github.com/IntroPhylogenomics/ModelSelectionAndFit/blob/master/3_revbayes_model_testing.zip).
+
+As a final exercise, we can bring together many of the things that we have been working on to assess the fit of our partition model that we selected this morning. We'll use the model identified by IQtree (1:GTR, 2:HKY+G, 3,4:JC). You'll need to set up a revscript that:
+
+- reads in the four loci
+- sets up an appropriate partitioning scheme
+- assigns the correct substitution model to each gene
+- run a P<sup>3</sup> analysis for this model
+
+Does the model seem to be an adequate description of the data?
